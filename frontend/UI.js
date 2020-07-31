@@ -48,8 +48,9 @@ class UI {
 
    }
 
-   deleteBook(){
-
+   async deleteBook(bookId){
+    await bookService.deleteBook(bookId);
+    this.renderBooks();
    }
 
 }
