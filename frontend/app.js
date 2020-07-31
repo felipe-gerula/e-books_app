@@ -25,7 +25,7 @@ document.getElementById('book-form')
     const ui = new UI();
     
     ui.addNewBook(formData);
-
+    ui.renderMessage("New Book Added","success",3000);
     e.preventDefault();
   });
 
@@ -33,6 +33,7 @@ document.getElementById('book-form')
     if(e.target.classList.contains("delete")){
       const ui = new UI();
       ui.deleteBook(e.target.getAttribute("_id"));
+      ui.renderMessage("Book Deleted","danger",3000);
     }
     e.preventDefault();
   });
